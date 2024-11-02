@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCULATOR</title>
+    <style>
+      body {
+        background-image: url("bg.png");
+        background-repeat: no-repeat;
+        background-size: 100% 130%;
+      }
+      #calci {
+        margin: 0px auto;
+        margin-top: 150px;
+        margin-left: 650px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5%;
+        background-color: black;
+        box-shadow: 0 0 5px 5px lightblue;
+        width: 70px;
+      }
+      th,
+      td {
+        border: none;
+        padding-top: 20px;
+      }
+      th {
+        border-radius: 0%;
+      }
+
+      .search-input {
+        padding: 30px 30px;
+        border-color: white;
+      }
+      .button,
+      .operate {
+        padding: 10px 15px;
+        margin-left: 15px;
+        border-radius: 50%;
+        border-color: white;
+        box-shadow: 0 0 3px 3px rgb(125, 109, 109);
+      }
+
+      input[type="button"] {
+        color: white;
+        background-color: rgb(125, 109, 109);
+        font-weight: bolder;
+        font-size: medium;
+      }
+      input[class="operate"] {
+        color: white;
+        background-color: orange;
+        box-shadow: 0 0 2px 2px rgb(229, 195, 131);
+        font-size: larger;
+      }
+      input[value="C"] {
+        background-color: red;
+        box-shadow: 0 0 3px 3px rgb(119, 86, 25);
+      }
+      input[type="text"] {
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <table id="calci" border="2px">
+        <th class="display" colspan="4">
+          <input class="search-input" type="text" id="result" />
+          <tr>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="7"
+                onclick="calci.result.value+='7'"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="8"
+                onclick="calci.result.value+='8'"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="9"
+                onclick="dis('9')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="operate"
+                value="+"
+                onclick="dis('+')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="4"
+                onclick="dis('4')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="5"
+                onclick="dis('5')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="6"
+                onclick="dis('6')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="operate"
+                value="- "
+                onclick="dis('-')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="1"
+                onclick="dis('1')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="2"
+                onclick="dis('2')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="3"
+                onclick="dis('3')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="operate"
+                value="/ "
+                onclick="dis('/')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" class="button" value="C" onclick="clr()" />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="button"
+                value="0"
+                onclick="dis('0')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="operate"
+                value="* "
+                onclick="dis('*')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="operate"
+                value="="
+                onclick="calci.result.value=eval(calci.result.value)"
+              />
+            </td>
+          </tr>
+        </th>
+      </table>
+    </div>
+  </body>
+</html>

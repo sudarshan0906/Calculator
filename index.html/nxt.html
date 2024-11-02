@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      #main {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="main">I Love You</h1>
+    <button onclick="change()">Propose</button>
+    <script>
+      function change() {
+        document.getElementById("main").textContent = "Sorry!";
+        document.getElementById("main").style.color = "black";
+      }
+    </script>
+  </body>
+</html>

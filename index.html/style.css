@@ -1,0 +1,35 @@
+<form name="calci">
+        <br />
+        <input type="button" class="button" placeholder="7" />
+        <input type="button" class="button" placeholder="8" />
+        <input type="button" class="button" placeholder="9" />
+        <input type="button" class="button" placeholder="*" /><br />
+        <input type="button" class="button" placeholder="4" />
+        <input type="button" class="button" placeholder="5" />
+        <input type="button" class="button" placeholder="6" />
+        <input type="button" class="button" placeholder="-" /><br />
+        <input type="button" class="button" placeholder="1" />
+        <input type="button" class="button" placeholder="2" />
+        <input type="button" class="button" placeholder="3" />
+        <input type="button" class="button" placeholder="+" /><br />
+        <input type="button" class="button" placeholder="C" />
+        <input type="button" class="button" placeholder="/" />
+        <input type="button" class="button" placeholder="%" />
+        <input type="button" class="button" placeholder="=" />
+      </form>
+
+
+      <style>
+      .main {
+        margin-top: 10%;
+        background-color: aqua;
+      }
+      .display {
+        padding: 30px 50px 30px;
+      }
+      .button {
+        background-color: black;
+        padding: 10px 30px 10px;
+        border-radius: 10%;
+      }
+    </style>

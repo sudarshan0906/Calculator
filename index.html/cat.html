@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .dark-background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .switch-board {
+        position: relative;
+        border-radius: 5px;
+        background-color: aliceblue;
+        padding: 10px;
+        width: 850px;
+        height: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 50px;
+        margin-top: 100px;
+        border-radius: 3%;
+        background-color: gray;
+      }
+
+      .off-switch,
+      .on-switch {
+        padding: 10px;
+        height: 100px;
+        width: 100px;
+        font-size: x-large;
+        font-weight: bolder;
+      }
+      .on-switch {
+        margin-left: 15px;
+        background-color: green;
+      }
+      .off-switch {
+        background-color: rgb(178, 174, 224);
+      }
+    </style>
+  </head>
+  <body bgcolor="black">
+    <div class="dark-background text-center">
+      <div>
+        <img
+          src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+          class="bulb-image"
+          id="bulbImage"
+        />
+      </div>
+      <div>
+        <img
+          src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"
+          class="cat-image"
+          id="catImage"
+        />
+      </div>
+      <div class="d-flex flex-row justify-content-center pt-5">
+        <div class="switch-board">
+          <h1 class="switch-status" id="switchStatus">Switched On</h1>
+          <div class="but">
+            <button class="off-switch" id="offswitch" onclick="switched_off()">
+              OFF
+            </button>
+            <button class="on-switch" id="onswitch" onclick="switched_on()">
+              ON
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function switched_on() {
+        document.getElementById("bulbImage").src =
+          "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+        document.getElementById("catImage").src =
+          "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+        document.getElementById("switchStatus").textContent = "Switched On";
+        document.getElementById("offSwitch").style.backgroundColor = "#e12d39";
+        document.getElementById("onSwitch").style.backgroundColor = "#cbd2d9";
+      }
+      function switched_off() {
+        document.getElementById("bulbImage").src =
+          "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+        document.getElementById("bulbImage").style.height = "1000px";
+        document.getElementById("catImage").src =
+          "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png";
+        document.getElementById("switchStatus").textContent = "Switched Off";
+        document.getElementById("onSwitch").style.backgroundColor = "#22c55e";
+        document.getElementById("offSwitch").style.backgroundColor = "#cbd2d9";
+      }
+    </script>
+  </body>
+</html>

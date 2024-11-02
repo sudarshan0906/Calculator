@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="success.html"
+      method="post"
+      id="registrationform"
+      onsubmit="return validate();"
+    >
+      <table align="center" border="1">
+        <th colspan="2">registrationform</th>
+        <tr>
+          <td>Name:</td>
+          <td>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+            <span id="spanName"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td>
+            <input
+              type="text"
+              name="pass"
+              id="pass"
+              placeholder="Enter your password"
+            />
+            <span id="spanNamepass"></span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <button type="reset" id="set">Reset</button>
+            <button type="submit">Login</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script type="text/javascript">
+      function validate() {
+        var namevalid;
+        if (document.getElementById("name").value == "") {
+          namevalid = false;
+          document.getElementById("spanName").innerHTML =
+            "please enter your name";
+          document.getElementById("spanName").style.color = "red";
+        } else if (document.getElementById("pass").value == "") {
+          namevalid = false;
+          document.getElementById("spanNamepass").innerHTML =
+            "please enter your password";
+          document.getElementById("spanNamepass").style.color = "red";
+        } else {
+          namevalid = true;
+          document.getElementById("spanName").innerHTML = "valid";
+          document.getElementById("spanName").style.color = "green";
+          document.getElementById("spanNamepass").innerHTML = "valid";
+          document.getElementById("spanNamepass").style.color = "green";
+        }
+        if (namevalid == false) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+      set.onclick = function () {
+        document.getElementById("spanName").innerHTML = "";
+        document.getElementById("spanNamepass").innerHTML = "";
+      };
+    </script>
+  </body>
+</html>
